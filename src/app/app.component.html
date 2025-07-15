@@ -1,0 +1,39 @@
+<div class="container">
+  <header class="hero-section">
+    <img src="assets/profile.jpg" alt="Foto Perfil - Alana Maiumy" class="profile-pic">
+    
+    <div class="title-container">
+      <span class="greeting">Hello world! Meu nome é Alana Maiumy e eu sou</span>
+      <h1>Desenvolvedora Front-end ✨</h1>
+      <div class="line"></div>
+    </div>
+    
+    <p class="description">
+      Transformo necessidades em aplicações reais, envolventes e funcionais. Desenvolvo sistemas através da
+      minha paixão pela tecnologia, contribuindo com soluções escaláveis 💕
+    </p>
+
+    <ul class="tech-list">
+      <li *ngFor="let tech of technologies">
+        <i [class]="tech.iconClass"></i>
+        <span>{{ tech.name }}</span>
+      </li>
+    </ul>
+  </header>
+
+  <main class="projects-section">
+    <div class="projects-header">
+      <h2>Meu trabalho</h2>
+      <p>Estes são alguns dos meus projetos pessoais e acadêmicos</p>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-card" *ngFor="let project of projects">
+        <div class="card-content">
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.description }}</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
